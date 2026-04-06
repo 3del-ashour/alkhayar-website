@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Next.js Dev Server",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["/Users/adelashour/alkhayar website/serve.sh"],
+      "port": 3000
+    }
+  ]
+}
