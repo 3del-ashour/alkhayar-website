@@ -83,6 +83,10 @@ html[dir="rtl"] [style*="--font-playfair"] {
   backdrop-filter: blur(12px);
 }
 
+/* Hero badge: hidden on mobile, shown on sm+ */
+.hero-badge { display: none; }
+@media (min-width: 640px) { .hero-badge { display: inline-flex; } }
+
 /* Noise texture overlay */
 .noise-overlay::before {
   content: '';

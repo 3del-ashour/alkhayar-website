@@ -51,10 +51,10 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-center">
-        {/* Badge */}
+      <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-center pt-24 sm:pt-28 lg:pt-0">
+        {/* Badge — desktop only */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full mb-8 border"
+          className="hero-badge items-center gap-2.5 px-5 py-2.5 rounded-full mb-8 border"
           style={{ background: "rgba(201,146,42,0.08)", borderColor: "rgba(201,146,42,0.25)" }}>
           <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#C9922A" }} />
           <span className="text-sm font-medium tracking-wider uppercase" style={{ color: "#C9922A", fontFamily: bodyFont }}>
@@ -64,7 +64,7 @@ export default function Hero() {
 
         {/* Headline */}
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.35 }}
-          className="text-5xl sm:text-6xl lg:text-8xl font-bold leading-[1.15] mb-6"
+          className="text-[2.4rem] sm:text-6xl lg:text-8xl font-bold leading-[1.15] mb-6"
           style={{ fontFamily: displayFont, color: "#F5F0E8" }}>
           <span className="block">{tr.headline1}</span>
           <span className="block" style={{ color: "#E8B45C" }}>{tr.headline2}</span>
