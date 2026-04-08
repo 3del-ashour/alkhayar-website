@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import { ChevronDown, ArrowRight, Shield, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -11,9 +11,6 @@ export default function Hero() {
   const tr = t[lang].hero;
 
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   const bodyFont = isAR ? "var(--font-cairo)" : "var(--font-dm-sans)";
   const displayFont = isAR ? "var(--font-cairo)" : "var(--font-playfair)";
@@ -30,8 +27,8 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: "#0A1628" }}
     >
-      {/* Parallax background layers */}
-      <motion.div style={{ y }} className="absolute inset-0">
+      {/* Background layers */}
+      <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px]"
           style={{ background: "radial-gradient(circle, #C9922A 0%, transparent 70%)" }} />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full opacity-15 blur-[100px]"
@@ -40,7 +37,7 @@ export default function Hero() {
           style={{ backgroundImage: "linear-gradient(rgba(201,146,42,1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,146,42,1) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="absolute inset-0 opacity-[0.025]"
           style={{ backgroundImage: "repeating-linear-gradient(45deg, #C9922A 0, #C9922A 1px, transparent 0, transparent 50%)", backgroundSize: "24px 24px" }} />
-      </motion.div>
+      </div>
 
       {/* Floating particles */}
       {[...Array(6)].map((_, i) => (
@@ -51,7 +48,7 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-center pt-24 sm:pt-28 lg:pt-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-center pt-24 sm:pt-28 lg:pt-0">
         {/* Badge — desktop only */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
           className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full mb-8 border"
@@ -114,7 +111,7 @@ export default function Hero() {
 
         {/* Stats row */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.85 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+          className="flex flex-row flex-wrap items-center justify-center gap-6 sm:gap-12">
           {[
             { icon: Shield, value: tr.stat1Value, label: tr.stat1Label },
             { icon: Globe, value: tr.stat2Value, label: tr.stat2Label },
@@ -136,11 +133,11 @@ export default function Hero() {
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator — hidden on mobile */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
+        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 cursor-pointer"
         onClick={() => handleScroll("#about")}>
         <span className="text-xs tracking-widest uppercase" style={{ color: "rgba(245,240,232,0.4)", fontFamily: bodyFont }}>{tr.scroll}</span>
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }} style={{ color: "#C9922A" }}>
