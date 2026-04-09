@@ -19,7 +19,7 @@ export const t = {
       headline2: "Trusted Auto",
       headline3: "Parts Supplier",
       arabicName: "شركة الخيار",
-      sub: "Over 25 years of trusted automotive supply in Libya. We import all auto spare parts from Korea, covering every brand in the Libyan market — plus exclusive S-Oil lubricants and Hi-TEC brake products, wholesale across Libya.",
+      sub: "Over 25 years of trusted automotive supply in Libya — importing genuine Korean auto parts for every brand on Libyan roads.",
       ctaContact: "Contact Us",
       ctaProducts: "Our Products",
       stat1Value: "25+",
@@ -55,15 +55,7 @@ export const t = {
         },
         {
           title: "Korean Direct Import",
-          body: "Direct sourcing from South Korean manufacturers means authentic parts, competitive wholesale pricing, and no risk of counterfeit products.",
-        },
-        {
-          title: "Exclusive Korean Agencies",
-          body: "S-Oil Corporation for lubricants and Dongwoo Brake for Hi-TEC brake products — two official Korean agencies held exclusively in Libya.",
-        },
-        {
-          title: "3 Branches Nationwide",
-          body: "Two branches in Tripoli and one in Misrata, ensuring fast access to our full product range across western Libya and beyond.",
+          body: "Direct sourcing from South Korean manufacturers means authentic parts, competitive wholesale pricing, and zero counterfeit risk.",
         },
       ],
     },
@@ -227,7 +219,7 @@ export const t = {
       headline2: "موثوقيةً في توريد",
       headline3: "قطع السيارات في ليبيا",
       arabicName: "شركة الخيار",
-      sub: "أكثر من 25 عاماً من التوريد الموثوق في ليبيا. نستورد قطع غيار السيارات من كوريا لجميع الماركات الموجودة في السوق الليبي — بالإضافة إلى زيوت S-Oil الحصرية ومنتجات فرامل Hi-TEC، مع التوزيع بالجملة في كل أنحاء ليبيا.",
+      sub: "أكثر من 25 عاماً من التوريد الموثوق في ليبيا — نستورد قطع غيار سيارات كورية أصلية لجميع الماركات الموجودة على الطرق الليبية.",
       ctaContact: "تواصل معنا",
       ctaProducts: "منتجاتنا",
       stat1Value: "+25",
@@ -264,14 +256,6 @@ export const t = {
         {
           title: "استيراد مباشر من كوريا",
           body: "الشراء المباشر من المصنّعين الكوريين يعني قطعاً أصلية وأسعاراً جملة تنافسية وصفراً من مخاطر المنتجات المقلّدة.",
-        },
-        {
-          title: "وكالتان كوريتان حصريتان",
-          body: "الموزع الرسمي لزيوت S-Oil Corporation والوكيل الحصري لمنتجات Hi-TEC من Dongwoo Brake — وكالتان كوريتان رسميتان لا يمتلكهما أي منافس في ليبيا.",
-        },
-        {
-          title: "3 فروع في ليبيا",
-          body: "فرعان في طرابلس وفرع واحد في مصراتة، مما يضمن وصول عملائنا من الورش وتجار القطع إلى منتجاتنا الكاملة في مختلف أنحاء غرب ليبيا.",
         },
       ],
     },
