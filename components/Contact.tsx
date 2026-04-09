@@ -138,29 +138,30 @@ export default function Contact() {
               })}
             </motion.div>
 
-            {/* Map placeholder */}
+            {/* Google Map embed */}
             <motion.div custom={5} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"}
-              className="rounded-2xl overflow-hidden border" style={{ borderColor: "rgba(201,146,42,0.2)" }}>
-              <div className="relative h-44 flex items-center justify-center" style={{ background: "linear-gradient(135deg, #0F1F3D, #162847)" }}>
-                <div className="absolute inset-0 opacity-10"
-                  style={{ backgroundImage: "linear-gradient(rgba(201,146,42,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(201,146,42,0.5) 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
-                <div className="relative text-center z-10">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 border-2"
-                    style={{ background: "rgba(201,146,42,0.2)", borderColor: "#C9922A", color: "#C9922A" }}>
-                    <MapPin size={22} />
-                  </div>
-                  <div className="text-sm font-semibold" style={{ color: "#F5F0E8", fontFamily: bodyFont }}>
-                    {isAR ? "طرابلس ومصراتة، ليبيا" : "Tripoli & Misrata, Libya"}
-                  </div>
-                  <div className="text-xs mt-1" style={{ color: "rgba(245,240,232,0.5)", fontFamily: bodyFont }}>
-                    {isAR ? "3 فروع في ليبيا" : "3 Branches Nationwide"}
-                  </div>
-                  <a href="https://maps.app.goo.gl/eiXaya5uVQv4z8XT6" target="_blank" rel="noopener noreferrer"
-                    className="inline-block mt-3 text-xs px-4 py-1.5 rounded-full border transition-all duration-200"
-                    style={{ color: "#C9922A", borderColor: "rgba(201,146,42,0.4)", background: "rgba(201,146,42,0.08)", fontFamily: bodyFont }}>
-                    {tr.openMaps}
-                  </a>
-                </div>
+              className="rounded-2xl overflow-hidden border" style={{ borderColor: "rgba(201,146,42,0.25)" }}>
+              <iframe
+                src="https://maps.google.com/maps?q=Tripoli,Libya&output=embed&hl=en"
+                width="100%"
+                height="220"
+                style={{ border: 0, display: "block" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={isAR ? "موقع فروع شركة الخيار" : "Alkhayar Branch Locations"}
+              />
+              <div className="flex items-center justify-between px-4 py-3"
+                style={{ background: "#0F1F3D", borderTop: "1px solid rgba(201,146,42,0.15)" }}>
+                <span className="text-xs" style={{ color: "rgba(245,240,232,0.55)", fontFamily: bodyFont }}>
+                  {isAR ? "طرابلس ومصراتة، ليبيا" : "Tripoli & Misrata, Libya"}
+                </span>
+                <a href="https://maps.app.goo.gl/eiXaya5uVQv4z8XT6" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-all duration-200"
+                  style={{ color: "#C9922A", background: "rgba(201,146,42,0.1)", border: "1px solid rgba(201,146,42,0.25)", fontFamily: bodyFont }}>
+                  <MapPin size={11} />
+                  {tr.openMaps}
+                </a>
               </div>
             </motion.div>
           </div>

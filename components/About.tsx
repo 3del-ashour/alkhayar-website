@@ -102,11 +102,15 @@ export default function About() {
                 ))}
               </div>
 
-              <div className="border-l-2 pl-4 py-1" style={{ borderColor: "#C9922A" }}>
-                <p className="text-sm leading-relaxed italic" style={{ color: "rgba(245,240,232,0.7)", fontFamily: bodyFont }}>
-                  &ldquo;{tr.quote}&rdquo;
-                </p>
-                <p className="text-xs mt-2 font-semibold" style={{ color: "#C9922A", fontFamily: bodyFont }}>{tr.quoteAuthor}</p>
+              <div className="flex items-start gap-3 p-4 rounded-xl"
+                style={{ background: "rgba(201,146,42,0.07)", border: "1px solid rgba(201,146,42,0.2)" }}>
+                <div className="w-1 self-stretch rounded-full flex-shrink-0" style={{ background: "#C9922A" }} />
+                <div>
+                  <p className="text-sm leading-relaxed font-medium" style={{ color: "rgba(245,240,232,0.85)", fontFamily: bodyFont }}>
+                    {tr.quote}
+                  </p>
+                  <p className="text-xs mt-2 font-semibold tracking-wide" style={{ color: "#C9922A", fontFamily: bodyFont }}>{tr.quoteAuthor}</p>
+                </div>
               </div>
             </div>
           </motion.div>

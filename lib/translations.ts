@@ -46,8 +46,8 @@ export const t = {
       stat3Sub: "Branches",
       stat4: "Korea",
       stat4Sub: "Direct Import",
-      quote: "We cover every brand in Libya — one source, direct from Korea, backed by 25 years of trust.",
-      quoteAuthor: "— Alkhayar Company",
+      quote: "One trusted source for every brand in Libya — direct from Korea since 1999.",
+      quoteAuthor: "Est. 1999 · Tripoli & Misrata",
       pillars: [
         {
           title: "All Brands, One Supplier",
@@ -104,6 +104,13 @@ export const t = {
           items: ["Bulk & Wholesale Pricing", "Workshop & Retailer Supply", "Fleet Operator Programs", "3 Branches: Tripoli & Misrata"],
         },
       ],
+    },
+
+    // Brands
+    brands: {
+      label: "Coverage",
+      headline: "Every Brand on Libyan Roads",
+      sub: "We import genuine Korean spare parts covering all makes in Libya — Japanese, Korean, European & American vehicles.",
     },
 
     // Why Us
@@ -183,7 +190,7 @@ export const t = {
       quickLinks: "Quick Links",
       ourProducts: "Our Products",
       contactUs: "Contact Us",
-      links: ["About Us", "Products", "Why Choose Us", "Our History", "Contact"],
+      links: ["About Us", "Products", "Our History", "Contact"],
       productList: ["S-Oil Lubricants", "Hi-TEC Brake Products", "Auto Spare Parts", "Wholesale Distribution", "Korean Direct Import"],
       branches: "Our Branches",
       branchList: ["Tripoli — Al-Sab'a Branch", "Tripoli — Al-Kanisiya Branch", "Misrata Branch"],
@@ -246,8 +253,8 @@ export const t = {
       stat3Sub: "فروع",
       stat4: "كوريا",
       stat4Sub: "استيراد مباشر",
-      quote: "نغطي كل ماركة في ليبيا — مصدر واحد، مباشرة من كوريا، بثقة 25 عاماً.",
-      quoteAuthor: "— شركة الخيار",
+      quote: "مصدر واحد موثوق لكل ماركة في ليبيا — مباشرة من كوريا منذ 1999.",
+      quoteAuthor: "تأسست 1999 · طرابلس ومصراتة",
       pillars: [
         {
           title: "جميع الماركات، مورّد واحد",
@@ -304,6 +311,13 @@ export const t = {
           items: ["أسعار جملة وبيع بالكميات", "توريد للورش وتجار التجزئة", "برامج مشغلي الأساطيل", "3 فروع: طرابلس ومصراتة"],
         },
       ],
+    },
+
+    // Brands
+    brands: {
+      label: "التغطية",
+      headline: "جميع الماركات على الطرق الليبية",
+      sub: "نستورد قطع غيار كورية أصلية لجميع الماركات في ليبيا — يابانية وكورية وأوروبية وأمريكية.",
     },
 
     // Why Us
@@ -383,7 +397,7 @@ export const t = {
       quickLinks: "روابط سريعة",
       ourProducts: "منتجاتنا",
       contactUs: "تواصل معنا",
-      links: ["عن الشركة", "المنتجات", "لماذا تختارنا", "تاريخنا", "تواصل معنا"],
+      links: ["عن الشركة", "المنتجات", "تاريخنا", "تواصل معنا"],
       productList: ["زيوت S-Oil", "فرامل Hi-TEC", "قطع غيار جميع الماركات", "توزيع بالجملة", "استيراد كوري مباشر"],
       branches: "فروعنا",
       branchList: ["طرابلس — فرع السبعة", "طرابلس — فرع الكنسية", "فرع مصراتة"],
