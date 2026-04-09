@@ -5,7 +5,7 @@ import { MapPin, Phone, MessageCircle, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { t } from "@/lib/translations";
 
-const sectionHrefs = ["#about", "#products", "#timeline", "#contact"];
+const sectionHrefs = ["#about", "#products", "#timeline", "#partners", "#contact"];
 
 const handleNav = (href: string) => {
   const el = document.querySelector(href);

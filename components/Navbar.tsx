@@ -17,6 +17,7 @@ export default function Navbar() {
     { label: tr.about, href: "#about" },
     { label: tr.products, href: "#products" },
     { label: tr.history, href: "#timeline" },
+    { label: tr.partners, href: "#partners" },
     { label: tr.contact, href: "#contact" },
   ];
 

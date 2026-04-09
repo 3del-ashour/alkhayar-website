@@ -15,7 +15,7 @@ const fadeUp = {
   }),
 };
 
-type FormState = { name: string; email: string; phone: string; message: string };
+type FormState = { name: string; email: string; phone: string; subject: string; message: string };
 
 export default function Contact() {
   const { lang, isAR } = useLanguage();
@@ -25,7 +25,7 @@ export default function Contact() {
 
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
-  const [form, setForm] = useState<FormState>({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState<FormState>({ name: "", email: "", phone: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -178,7 +178,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-xl font-bold mb-2" style={{ color: "#F5F0E8", fontFamily: displayFont }}>{tr.successTitle}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "rgba(245,240,232,0.6)", fontFamily: bodyFont }}>{tr.successBody}</p>
-                  <button onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", message: "" }); }}
+                  <button onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", subject: "", message: "" }); }}
                     className="mt-6 text-xs px-5 py-2.5 rounded-lg border transition-all cursor-pointer"
                     style={{ color: "#C9922A", borderColor: "rgba(201,146,42,0.3)", fontFamily: bodyFont }}>
                     {tr.successReset}
@@ -186,6 +186,24 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <label className="block text-xs font-semibold mb-2 tracking-wide" style={{ color: "rgba(245,240,232,0.7)", fontFamily: bodyFont }}>{tr.formSubject} *</label>
+                    <select
+                      name="subject"
+                      value={form.subject}
+                      onChange={(e) => setForm((p) => ({ ...p, subject: e.target.value }))}
+                      required
+                      className={inputClass}
+                      style={{ ...inputStyle, appearance: "none" }}
+                      onFocus={(e) => { e.target.style.borderColor = "rgba(201,146,42,0.5)"; e.target.style.boxShadow = "0 0 0 3px rgba(201,146,42,0.1)"; }}
+                      onBlur={(e) => { e.target.style.borderColor = "rgba(201,146,42,0.15)"; e.target.style.boxShadow = "none"; }}
+                    >
+                      <option value="" disabled style={{ background: "#0F1F3D" }}>{tr.formSubjectDefault}</option>
+                      {tr.formSubjectOptions.map((opt) => (
+                        <option key={opt.value} value={opt.value} style={{ background: "#0F1F3D" }}>{opt.label}</option>
+                      ))}
+                    </select>
+                  </div>
                   <div>
                     <label className="block text-xs font-semibold mb-2 tracking-wide" style={{ color: "rgba(245,240,232,0.7)", fontFamily: bodyFont }}>{tr.formName} *</label>
                     <input type="text" name="name" value={form.name} onChange={handleChange} required placeholder={tr.formNamePlaceholder} className={inputClass} style={inputStyle}
