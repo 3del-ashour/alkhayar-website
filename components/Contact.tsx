@@ -142,13 +142,12 @@ export default function Contact() {
             <motion.div custom={5} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"}
               className="rounded-2xl overflow-hidden border" style={{ borderColor: "rgba(201,146,42,0.25)" }}>
               <iframe
-                src="https://maps.google.com/maps?q=Tripoli,Libya&output=embed&hl=en"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=13.05%2C32.83%2C13.35%2C32.97&layer=mapnik&marker=32.9%2C13.18"
                 width="100%"
                 height="220"
                 style={{ border: 0, display: "block" }}
                 allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
                 title={isAR ? "موقع فروع شركة الخيار" : "Alkhayar Branch Locations"}
               />
               <div className="flex items-center justify-between px-4 py-3"
